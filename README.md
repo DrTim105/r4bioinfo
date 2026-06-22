@@ -1,6 +1,4 @@
 # r4bioinfo
-````markdown
-<div align="center">
 
 # 🧬 R for Bioinformatics
 
@@ -474,6 +472,3 @@ If this repository helped you learn R or bioinformatics, consider:
 **[🍴 Fork it](https://github.com/[username]/r4bioinfo/fork)**  ·  
 **[🐛 Report an issue](https://github.com/[username]/r4bioinfo/issues)**  ·  
 **[💬 Start a discussion](https://github.com/[username]/r4bioinfo/discussions)**
-
-</div>
-````
