@@ -133,13 +133,12 @@ your script. Address these questions:
 
 By the end of this challenge your `figures/` folder should contain:
 
+```
 figures/
-
 ├── 01_protein_coding_per_chromosome.png
-
 ├── 02_gene_biotypes.png
-
 └── 03_biotype_by_chromosome_faceted.png
+```
 
 And your `analysis.R` should end with a 3–5 sentence interpretation
 comment block addressing the biological patterns you observed.
