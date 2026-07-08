@@ -1,6 +1,6 @@
 # Data — HGNC Gene Set (Processed)
 
-## For students — this is all you need
+## For learners — this is all you need
 
 This folder contains **`hgnc_processed.rds`**, a ready-to-use file
 derived from the HGNC (Human Gene Nomenclature Committee) complete gene
