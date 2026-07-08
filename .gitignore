@@ -2,3 +2,27 @@
 .Rhistory
 .RData
 .Ruserdata
+
+# macOS
+.DS_Store
+
+# Raw genomic data — large files, excluded from version control
+# Each chapter's data/README.md documents how to re-download these
+*.txt
+*.tsv
+*.csv
+*.vcf
+*.bam
+*.bed
+*.gtf
+*.fasta
+*.fa
+
+# Exception: keep small, processed/ready-to-use datasets tracked
+# These are the files students actually load — no download needed
+!**/data/*_processed.rds
+!**/data/*_processed.tsv
+
+# Exception: keep the HINTS and CONTRIBUTING files (never accidentally matched, but explicit is safer)
+!HINTS.md
+!CONTRIBUTING.md
