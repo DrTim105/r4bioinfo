@@ -54,9 +54,8 @@ clone, no setup beyond R itself:
 ```r
 library(tidyverse)
 
-hgnc <- read_rds(url(
-  "https://raw.githubusercontent.com/DrTim105/r4bioinfo/main/chapter_01_gene_distribution_viz/data/hgnc_processed.rds"
-))
+hgnc <- read_rds("https://raw.githubusercontent.com/DrTim105/r4bioinfo/main/chapter_01_gene_distribution_viz/data/hgnc_processed.rds")
+
 ```
 
 That's it — `hgnc` is now loaded in your session and ready for
