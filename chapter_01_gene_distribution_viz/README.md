@@ -18,6 +18,10 @@ Install required packages if you have not already:
 install.packages(c("tidyverse", "ggrepel", "patchwork"))
 ```
 
+**No Git or GitHub account is required to attempt this challenge.**
+You just need R, RStudio, and the packages above. Open a new R script
+and follow along below.
+
 ---
 
 ## Biological Context
@@ -44,14 +48,36 @@ yourself.
 
 ## Data
 
-Load the dataset directly — no download or setup required:
+Load the dataset directly from this repository — no download, no
+clone, no setup beyond R itself:
 
 ```r
 library(tidyverse)
-hgnc <- read_rds("data/hgnc_processed.rds")
+
+hgnc <- read_rds(url(
+  "https://raw.githubusercontent.com/DrTim105/r4bioinfo/main/chapter_01_gene_distribution_viz/data/hgnc_processed.rds"
+))
 ```
 
-See `data/README.md` if you're curious how this file was prepared.
+That's it — `hgnc` is now loaded in your session and ready for
+Task 1. See `data/README.md` if you're curious how this file was
+prepared, or if you'd rather work with a local copy after cloning
+the repo (see the note on workflows below).
+
+---
+
+## Two Ways to Work Through This Challenge
+
+**Just attempting the challenge?** The code above is all you need.
+Open RStudio, paste it into a new script, and start on Task 1. No
+Git, no GitHub account, no cloning.
+
+**Want to save your solution to your own GitHub fork?** You'll need
+Git set up locally and a clone of your fork. This is covered properly
+in [Chapter 6 — Setting Up a Reproducible Project](../chapter_06_project_setup/)
+and in the [Contributing](../README.md#-contributing) section of the
+main README. There's no rush — you can always come back and set this
+up once you're comfortable with the R side of things.
 
 ---
 
@@ -168,7 +194,8 @@ and finish each with:
 
 Look up `labs()` if you're not sure how to add these.
 
-Then export each to the `figures/` folder at 300 DPI using `ggsave()`:
+Then export each to a `figures/` folder at 300 DPI using `ggsave()`
+(create the folder first if you're working outside a clone of the repo):
 
 ```r
 ggsave("figures/01_gene_biotypes.png", width = 10, height = 6, dpi = 300)
@@ -180,7 +207,7 @@ ggsave("figures/03_biotype_by_chromosome_faceted.png", width = 14, height = 8, d
 
 ### Task 8 — Interpret your results
 
-Write a comment block at the end of `analysis.R` (3–5 sentences)
+Write a comment block at the end of your script (3–5 sentences)
 covering:
 
 - What biological patterns did you notice across your plots?
@@ -194,7 +221,7 @@ covering:
 
 | R Skill | Function |
 |---|---|
-| Loading data | `read_rds()` |
+| Loading data from a URL | `read_rds()`, `url()` |
 | Exploring a dataset | `glimpse()`, `count()` |
 | Bar charts | `geom_bar()` |
 | Mapping aesthetics | `aes(fill =, colour =)` |
@@ -209,7 +236,7 @@ covering:
 
 ## Expected Outputs
 
-By the end of this challenge your `figures/` folder should contain:
+By the end of this challenge you should have three exported plots:
 
 ```
 figures/
@@ -218,8 +245,7 @@ figures/
 └── 03_biotype_by_chromosome_faceted.png
 ```
 
-And your `analysis.R` should end with a short interpretation comment
-block.
+And your script should end with a short interpretation comment block.
 
 ---
 
@@ -242,7 +268,8 @@ block.
 
 By completing this challenge you will be able to:
 
-- Load and explore a real genomic dataset
+- Load a dataset directly from a URL
+- Explore a new dataset with `glimpse()` and `count()`
 - Build bar charts with `geom_bar()`
 - Map variables to colour and fill aesthetics
 - Flip coordinates for readability with `coord_flip()`
@@ -261,9 +288,10 @@ Try to spend at least 15 minutes on a problem before reading a hint.
 
 ---
 
-## Commit your work
+## Ready to save your work permanently?
 
-When your analysis is complete:
+If you've set up Git and cloned your own fork (see the workflows note
+above), commit your completed script:
 
 ```
 [ch01] solve: initial ggplot2 analysis
